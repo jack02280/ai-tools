@@ -1,4 +1,4 @@
-//import { verifyReceiptModel } from '@/lib/sentimentService';
+import { wordsAnalysisModel } from '@/lib/sentimentService';
 import { useState } from 'react';
 import { ActivityIndicator, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
@@ -17,9 +17,10 @@ export default function SentimentScreen() {
     setLoading(true);
     setError(null);
     try {
-      //const response = await verifyReceiptModel(text);
-      //setResult(JSON.parse(response));
+       const response = await wordsAnalysisModel(text);
+       setResult(JSON.parse(response));
     } catch (err) {
+      console.log(err);
       setError('分析失败，请稍后重试');
     } finally {
       setLoading(false);

@@ -11,7 +11,7 @@ export default function HomeScreen() {
       </View>
 
       <View style={styles.features}>
-        <Link href="/sentiment" asChild>
+        <Link href="/wordsAnalysis" asChild>
           <TouchableOpacity style={styles.featureCard}>
             <View style={styles.featureIcon}>
               <Text style={styles.iconText}>😊</Text>
@@ -19,6 +19,18 @@ export default function HomeScreen() {
             <Text style={styles.featureTitle}>情绪分析</Text>
             <Text style={styles.featureDescription}>
               输入一句话，AI帮你分析情绪状态
+            </Text>
+          </TouchableOpacity>
+        </Link>
+
+        <Link href="/imageAnalysis" asChild>
+          <TouchableOpacity style={styles.featureCard}>
+            <View style={styles.featureIcon}>
+              <Text style={styles.iconText}>🖼️</Text>
+            </View>
+            <Text style={styles.featureTitle}>算命大师</Text>
+            <Text style={styles.featureDescription}>
+              输入图片，AI帮你算命
             </Text>
           </TouchableOpacity>
         </Link>
@@ -54,12 +66,12 @@ const styles = StyleSheet.create({
   },
   features: {
     flex: 1,
+    gap: 20,
   },
   featureCard: {
     backgroundColor: '#f8f9fa',
     borderRadius: 16,
     padding: 20,
-    marginBottom: 20,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
