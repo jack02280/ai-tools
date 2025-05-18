@@ -11,7 +11,11 @@ export default function HomeScreen() {
       </View>
 
       <View style={styles.features}>
+<<<<<<< HEAD
         <Link href="/Ai/wordsAnalysis" asChild>
+=======
+        <Link href="/wordsAnalysis" asChild>
+>>>>>>> fe4b7e5 (添加算命功能)
           <TouchableOpacity style={styles.featureCard}>
             <View style={styles.featureIcon}>
               <Text style={styles.iconText}>😊</Text>
@@ -22,6 +26,22 @@ export default function HomeScreen() {
             </Text>
           </TouchableOpacity>
         </Link>
+<<<<<<< HEAD
+=======
+
+        <Link href="/imageAnalysis" asChild>
+          <TouchableOpacity style={styles.featureCard}>
+            <View style={styles.featureIcon}>
+              <Text style={styles.iconText}>🖼️</Text>
+            </View>
+            <Text style={styles.featureTitle}>算命大师</Text>
+            <Text style={styles.featureDescription}>
+              输入图片，AI帮你算命
+            </Text>
+          </TouchableOpacity>
+        </Link>
+      </View>
+>>>>>>> fe4b7e5 (添加算命功能)
 
         <Link href="/Ai/imageAnalysis" asChild>
           <TouchableOpacity style={styles.featureCard}>
