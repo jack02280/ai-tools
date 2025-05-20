@@ -1,5 +1,4 @@
 import OpenAI from 'openai';
-import { useState } from 'react';
 
 export const wordsAnalysisModel = async (content: string): Promise<string> => {
 
