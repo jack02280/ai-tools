@@ -29,15 +29,29 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Home',
+          title: '首页',
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="Ai/imageAnalysis"
         options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          title: '图片分析',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="photo.fill" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="Ai/wordsAnalysis"
+        options={{
+          title: '文字分析',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="text.bubble.fill" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="Ai/soundAnalysis"
+        options={{
+          title: '语音转写',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="waveform" color={color} />,
         }}
       />
     </Tabs>
