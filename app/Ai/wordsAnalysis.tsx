@@ -1,10 +1,5 @@
-<<<<<<<< HEAD:app/Ai/wordsAnalysis.tsx
-import { soundAnalysisModel } from '@/lib/sentimentService';
-========
 import { wordsAnalysisModel } from '@/lib/sentimentService';
->>>>>>>> fe4b7e5 (添加算命功能):app/wordsAnalysis.tsx
 import { useState } from 'react';
-import { ActivityIndicator, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
 export default function SentimentScreen() {
   const [text, setText] = useState('');
@@ -21,13 +16,8 @@ export default function SentimentScreen() {
     setLoading(true);
     setError(null);
     try {
-<<<<<<<< HEAD:app/Ai/wordsAnalysis.tsx
-      const response = await soundAnalysisModel(text);
-      setResult(JSON.parse(response));
-========
        const response = await wordsAnalysisModel(text);
        setResult(JSON.parse(response));
->>>>>>>> fe4b7e5 (添加算命功能):app/wordsAnalysis.tsx
     } catch (err) {
       console.log(err);
       setError('分析失败，请稍后重试');
