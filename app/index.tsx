@@ -27,7 +27,7 @@ export default function HomeScreen() {
           <Link href="/Ai/imageAnalysis" asChild>
             <TouchableOpacity style={styles.featureCard}>
               <View style={styles.featureIcon}>
-                <Text style={styles.iconText}>🖼️</Text>
+                <Text style={styles.iconText}>🔮</Text>
               </View>
               <Text style={styles.featureTitle}>算命大师</Text>
               <Text style={styles.featureDescription}>
@@ -39,11 +39,11 @@ export default function HomeScreen() {
           <Link href="/Ai/soundAnalysis" asChild>
             <TouchableOpacity style={styles.featureCard}>
               <View style={styles.featureIcon}>
-                <Text style={styles.iconText}>🎵</Text>
+                <Text style={styles.iconText}>🖼️</Text>
               </View>
-              <Text style={styles.featureTitle}>语音转写</Text>
+              <Text style={styles.featureTitle}>文字转图</Text>
               <Text style={styles.featureDescription}>
-                输入语音，AI帮你转写为文字
+                输入文字，AI帮你生成图片
               </Text>
             </TouchableOpacity>
           </Link>
