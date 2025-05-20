@@ -1,79 +1,70 @@
 import { Link } from 'expo-router';
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 export default function HomeScreen() {
   return (
-    <View style={styles.container}>
-      <View style={styles.header}>
-        <Text style={styles.title}>AI 助手</Text>
-        <Text style={styles.subtitle}>智能分析，轻松生活</Text>
+    <ScrollView style={styles.scrollView} contentContainerStyle={styles.scrollViewContent}>
+      <View style={styles.container}>
+        <View style={styles.header}>
+          <Text style={styles.title}>AI 助手</Text>
+          <Text style={styles.subtitle}>智能分析，轻松生活</Text>
+        </View>
+
+        <View style={styles.features}>
+          <Link href="/Ai/wordsAnalysis" asChild>
+            <TouchableOpacity style={styles.featureCard}>
+              <View style={styles.featureIcon}>
+                <Text style={styles.iconText}>😊</Text>
+              </View>
+              <Text style={styles.featureTitle}>情绪分析</Text>
+              <Text style={styles.featureDescription}>
+                输入一句话，AI帮你分析情绪状态
+              </Text>
+            </TouchableOpacity>
+          </Link>
+
+          <Link href="/Ai/imageAnalysis" asChild>
+            <TouchableOpacity style={styles.featureCard}>
+              <View style={styles.featureIcon}>
+                <Text style={styles.iconText}>🖼️</Text>
+              </View>
+              <Text style={styles.featureTitle}>算命大师</Text>
+              <Text style={styles.featureDescription}>
+                输入手相，AI帮你算命
+              </Text>
+            </TouchableOpacity>
+          </Link>
+
+          <Link href="/Ai/soundAnalysis" asChild>
+            <TouchableOpacity style={styles.featureCard}>
+              <View style={styles.featureIcon}>
+                <Text style={styles.iconText}>🎵</Text>
+              </View>
+              <Text style={styles.featureTitle}>语音转写</Text>
+              <Text style={styles.featureDescription}>
+                输入语音，AI帮你转写为文字
+              </Text>
+            </TouchableOpacity>
+          </Link>
+        </View>
       </View>
 
-      <View style={styles.features}>
-<<<<<<< HEAD
-        <Link href="/Ai/wordsAnalysis" asChild>
-=======
-        <Link href="/wordsAnalysis" asChild>
->>>>>>> fe4b7e5 (添加算命功能)
-          <TouchableOpacity style={styles.featureCard}>
-            <View style={styles.featureIcon}>
-              <Text style={styles.iconText}>😊</Text>
-            </View>
-            <Text style={styles.featureTitle}>情绪分析</Text>
-            <Text style={styles.featureDescription}>
-              输入一句话，AI帮你分析情绪状态
-            </Text>
-          </TouchableOpacity>
-        </Link>
-<<<<<<< HEAD
-=======
-
-        <Link href="/imageAnalysis" asChild>
-          <TouchableOpacity style={styles.featureCard}>
-            <View style={styles.featureIcon}>
-              <Text style={styles.iconText}>🖼️</Text>
-            </View>
-            <Text style={styles.featureTitle}>算命大师</Text>
-            <Text style={styles.featureDescription}>
-              输入图片，AI帮你算命
-            </Text>
-          </TouchableOpacity>
-        </Link>
-      </View>
->>>>>>> fe4b7e5 (添加算命功能)
-
-        <Link href="/Ai/imageAnalysis" asChild>
-          <TouchableOpacity style={styles.featureCard}>
-            <View style={styles.featureIcon}>
-              <Text style={styles.iconText}>🖼️</Text>
-            </View>
-            <Text style={styles.featureTitle}>算命大师</Text>
-            <Text style={styles.featureDescription}>
-              输入手相，AI帮你算命
-            </Text>
-          </TouchableOpacity>
-        </Link>
-      </View>
-      <Link href="/Ai/soundAnalysis" asChild>
-        <TouchableOpacity style={styles.featureCard}>
-          <View style={styles.featureIcon}>
-            <Text style={styles.iconText}>🎵</Text>
-          </View>
-          <Text style={styles.featureTitle}>语音转写</Text>
-          <Text style={styles.featureDescription}>
-            输入语音，AI帮你转写为文字
-          </Text>
-        </TouchableOpacity>
-      </Link>
       <View style={styles.footer}>
         <Text style={styles.footerText}>更多功能开发中...</Text>
       </View>
-    </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
+  scrollView: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
+  scrollViewContent: {
+    flexGrow: 1,
+  },
   container: {
     flex: 1,
     backgroundColor: '#fff',
@@ -97,6 +88,7 @@ const styles = StyleSheet.create({
   features: {
     flex: 1,
     gap: 20,
+    paddingVertical: 10,
   },
   featureCard: {
     backgroundColor: '#f8f9fa',
@@ -110,6 +102,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: 4,
     elevation: 3,
+    marginBottom: 15,
   },
   featureIcon: {
     width: 60,
