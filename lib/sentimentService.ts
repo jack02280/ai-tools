@@ -32,7 +32,36 @@ export const wordsAnalysisModel = async (content: string): Promise<string> => {
   return result!;
 
 }
+export const articleAnalysisModel = async (content: string,garde:string): Promise<string> => {
+  const systemMessage = `
+  你是一个专业的文章分析专家，请根据用户输入的文字和用户年级信息，分析文章的内容，并给出相应的分析结果。
+  结果以JSON格式返回，格式如下：
+  {
+    "文章结构": "文章结构(例如:总分总，总分，分总，分总总，等等)",
+    "人物": "文章中的人物(例如:张三，李四，王五，等等)",
+    "时间": "文章中的时间(例如:2024年3月15日，下午3点，等等)",
+    "地点": "文章中的地点(例如:北京市朝阳区，科技园区，等等)",
+    "事件": "文章中的事件(例如:召开了产品发布会，发布了新产品，等等)",
+    "得分": "文章的得分(0-100)(得分越高，文章越优秀)(根据用户年级信息，给出相应的得分)"
+  }
+  `;
+  const openai = new OpenAI({
+    apiKey: "eb2ae97c-cae5-49a0-bee0-0383be29f7c4",
+    baseURL: 'https://ark.cn-beijing.volces.com/api/v3',
+    dangerouslyAllowBrowser: true,
+  });
+  const completion = await openai.chat.completions.create({
+    messages: [
+      { role: 'system', content: systemMessage },
+      { role: 'user', content: '我是一个'+garde+'年级的学生，我写了一篇文章，请帮我分析一下这篇文章：'+content },
+    ],
+    model: 'ep-20250517175804-nb4dk',
+  });
 
+  const result = completion.choices[0]?.message?.content;
+  console.log(result);
+  return result!;
+}
 export const imageAnalysisModel = async (content: string,question:string): Promise<string> => {
   const systemMessage = `
   如果用户输入的并不是'请识别这张图片中手相或面相并给出分析结果'，请根据用户输入的追问，给出相应的分析结果,并不是json格式。  
@@ -84,14 +113,5 @@ export const imageAnalysisModel = async (content: string,question:string): Promi
   console.log(response.choices[0]);
   return response.choices[0].message.content!;
 }
-export const soundAnalysisModel = async (content: string): Promise<string> => {
-  const systemMessage = `
-  你是一个专业的语言转写专家，请将用户输入的音频文件转换为文字。
-  结果以JSON格式返回，格式如下：
-  {
-    "文字": "用户输入的音频文件转换为文字"
-  }
-  `;
-  return "你好";
-}
+
     

@@ -1,12 +1,11 @@
 import { Image } from 'expo-image';
 import * as ImagePicker from 'expo-image-picker';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { ActivityIndicator, ScrollView, StyleSheet, TextInput, TouchableOpacity, View } from 'react-native';
 
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { imageAnalysisModel } from '@/lib/sentimentService';
-import React from 'react';
 
 export default function HomeScreen() {
     const [image, setImage] = useState<string | null>(null);

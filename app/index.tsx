@@ -36,14 +36,14 @@ export default function HomeScreen() {
             </TouchableOpacity>
           </Link>
 
-          <Link href="/Ai/soundAnalysis" asChild>
+          <Link href="/Ai/articleAnslysis" asChild>
             <TouchableOpacity style={styles.featureCard}>
               <View style={styles.featureIcon}>
                 <Text style={styles.iconText}>🖼️</Text>
               </View>
-              <Text style={styles.featureTitle}>文字转图</Text>
+              <Text style={styles.featureTitle}>文章分析</Text>
               <Text style={styles.featureDescription}>
-                输入文字，AI帮你生成图片
+                输入文章，AI帮你分析
               </Text>
             </TouchableOpacity>
           </Link>
