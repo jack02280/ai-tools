@@ -1,52 +1,47 @@
-# Welcome to your Expo app 👋
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+# 智能工具集 - 基于Expo和豆包AI的现代应用介绍
 
-## Get started
+## 项目概述
 
-1. Install dependencies
+嗨大家好！今天给大家介绍一个基于Expo开发的移动应用，它集成了豆包AI的大模型能力，让我们能够在手机上轻松体验人工智能的强大功能。我们的应用主要提供三个核心功能：情绪分析、文章分析和图像分析（手相/面相测算）。
 
-   ```bash
-   npm install --force
-   ```
+## 技术亮点
 
-2. Start the app
+我们的应用采用了最新的Expo技术栈进行开发，这让我们能够同时兼容iOS和Android平台。在AI能力方面，我们成功集成了豆包AI的两个强大模型：
+- **Doubao-1.5-pro**（模型ID: ep-20250517175804-nb4dk）：用于处理文本分析任务
+- **Doubao-1.5-vision-pro**（模型ID: ep-20250517113822-525f5）：用于处理图像分析任务
 
-   ```bash
-   npx expo start
-   ```
+这些模型的调用方式采用了与OpenAI兼容的API范式，使得集成过程非常顺畅。
 
-In the output, you'll find options to open the app in a
+## 功能介绍
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### 1. 情绪分析
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+这个功能可以分析用户输入的一段文字，判断出背后的情绪状态，并给出一个0-100的情绪得分。无论是想了解一条消息的情感倾向，还是想分析自己的情绪状态，这个功能都能给你专业的参考。
 
-## Get a fresh project
+### 2. 文章分析
 
-When you're ready, run:
+针对学生用户设计的功能，能够智能分析一篇作文或文章的结构、人物、时间、地点和事件，并根据用户所在年级给出相应的评分。系统会保存历史分析记录，方便用户查看自己的写作进步。特别适合想提升写作能力的中小学生和大学生。
 
-```bash
-npm run reset-project
-```
+### 3. 算命大师
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+这是我们应用中最有趣的功能！上传一张手掌或面部的照片，系统会利用豆包AI的视觉大模型能力，分析手相或面相特征，包括掌型、生命线、智慧线、感情线等，给出一个专业的解读。用户还可以进一步追问，与AI进行互动。
 
-## Learn more
+## 用户体验
 
-To learn more about developing your project with Expo, look at the following resources:
+我们在开发过程中特别注重用户体验：
+- 简洁明了的界面设计
+- 快速的响应速度
+- 分析结果的可视化展示
+- 历史记录的保存与查询
+- 适合各年龄段用户的交互模式
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## 未来规划
 
-## Join the community
+我们计划继续丰富应用功能，包括：
+- 添加更多AI分析模块
+- 优化用户界面体验
+- 增加用户数据的导出功能
+- 支持更多语言和方言的分析
 
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
-
-
+感谢大家的聆听！我们的应用展示了如何将先进的AI技术带到日常生活中，让每个人都能轻松体验到AI带来的智能服务。欢迎大家下载试用，提供宝贵意见！
