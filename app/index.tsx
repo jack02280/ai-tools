@@ -65,9 +65,6 @@ export default function HomeScreen() {
         </View>
       </View>
 
-      <View style={styles.footer}>
-        <Text style={styles.footerText}>更多功能开发中...</Text>
-      </View>
     </ScrollView>
   );
 }
