@@ -11,6 +11,10 @@ export default function HomeScreen() {
           <Text style={styles.subtitle}>智能分析，轻松生活</Text>
         </View>
 
+
+
+
+
         <View style={styles.features}>
           <Link href="/Ai/wordsAnalysis" asChild>
             <TouchableOpacity style={styles.featureCard}>
@@ -39,11 +43,22 @@ export default function HomeScreen() {
           <Link href="/Ai/articleAnslysis" asChild>
             <TouchableOpacity style={styles.featureCard}>
               <View style={styles.featureIcon}>
-                <Text style={styles.iconText}>🖼️</Text>
+                <Text style={styles.iconText}>📝</Text>
               </View>
               <Text style={styles.featureTitle}>文章分析</Text>
               <Text style={styles.featureDescription}>
                 输入文章，AI帮你分析
+              </Text>
+            </TouchableOpacity>
+          </Link>
+          <Link href="/Ai/toImageAnalysis" asChild>
+            <TouchableOpacity style={styles.featureCard}>
+              <View style={styles.featureIcon}>
+                <Text style={styles.iconText}>🖼️</Text>
+              </View>
+              <Text style={styles.featureTitle}>图片生成</Text>
+              <Text style={styles.featureDescription}>
+                输入描述，AI帮你生成图片
               </Text>
             </TouchableOpacity>
           </Link>

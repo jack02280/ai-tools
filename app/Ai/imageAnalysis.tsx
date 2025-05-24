@@ -119,15 +119,16 @@ export default function HomeScreen() {
                         <ThemedView style={styles.resultContainer}>
                             <ThemedText type="subtitle">识别结果：</ThemedText>
                             <ThemedText style={styles.resultText}>
-                                "掌型":{result.掌型}{'\n'}
-                                "生命线":{result.生命线}{'\n'}
-                                "智慧线":{result.智慧线}{'\n'}
-                                "感情线":{result.感情线}{'\n'}
-                                "事业线":{result.事业线}{'\n'}
-                                "指型":{result.指型}{'\n'}
-                                "特殊纹":{result.特殊纹}{'\n'}
-                                "评价" :{result.评价+"(仅供参考)"}{'\n'}
-                                "得分": {result.得分}{'\n'}
+                                {"掌型"}:{result.掌型}{'\n'}
+                                {"生命线"}:{result.生命线}{'\n'}
+                                {"智慧线"}:{result.智慧线}{'\n'}
+                                {"感情线"}:{result.感情线}{'\n'}
+                                {"事业线"}:{result.事业线}{'\n'}
+                                {"指型"}:{result.指型}{'\n'}
+                                {"特殊纹"}:{result.特殊纹}{'\n'}
+                                {"评价"}:{result.评价+"(仅供参考)"}{'\n'}
+                                {"得分"}: {result.得分}{'\n'}
+                                
                             </ThemedText>
 
                             <View style={styles.followUpContainer}>

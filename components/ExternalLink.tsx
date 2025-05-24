@@ -13,9 +13,9 @@ export function ExternalLink({ href, ...rest }: Props) {
       href={href}
       onPress={async (event) => {
         if (Platform.OS !== 'web') {
-          // Prevent the default behavior of linking to the default browser on native.
+          // 阻止默认行为
           event.preventDefault();
-          // Open the link in an in-app browser.
+          // 在应用内浏览器中打开链接
           await openBrowserAsync(href);
         }
       }}

@@ -113,5 +113,26 @@ export const imageAnalysisModel = async (content: string,question:string): Promi
   console.log(response.choices[0]);
   return response.choices[0].message.content!;
 }
+export const toImageAnalysisModel = async (question:string): Promise<string> => {
+  try {
+    const response = await fetch('http://localhost:3001/api/generate-image', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ prompt: question }),
+    });
+
+    if (!response.ok) {
+      throw new Error('图片生成请求失败');
+    }
+
+    const data = await response.json();
+    return data.b64_json;
+  } catch (error) {
+    console.error('生成图片失败:', error);
+    throw error;
+  }
+}
 
     
